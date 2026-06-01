@@ -9,8 +9,11 @@ This repository contains a multi-model machine learning framework designed to de
 
 By combining cloud-scale geospatial processing in Google Earth Engine (GEE) with local deep learning benchmarking, this project addresses the critical challenge of **temporal domain shift** in satellite imagery. The methodology deliberately decouples absolute Land Surface Temperature (LST) from the classification feature space, forcing models to rely on structurally stable spectral indices to eliminate cross-epoch misclassification artifacts.
 
-![Map of Bokaro District](https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Bokaro_District_map.png)
-*Map of Bokaro District*
+<p align="center">
+  <img src="https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Bokaro_District_map.png" alt="Map of Bokaro District" width="500"><br>
+  <sub><b>Figure 1:</b> Map of Bokaro District</sub>
+</p>
+
 
 ## 🔬 Key Methodologies
 * **Cloud-Native Data Engineering:** Constructed pre-monsoon Landsat 8 surface reflectance composites, utilizing a strict <15% scene-level cloud filter and QA_PIXEL masking to bypass atmospheric contamination.
@@ -27,7 +30,10 @@ The decoupled 9-band spectral features were exported as a Float32 GeoTIFF and be
 | **XGBoost** | 200 estimators, max depth 6, learning rate 0.1 | **0.92** |
 | **PyTorch MLP** | 4-layer fully connected (128->128->64->32), BatchNorm, Dropout | **0.92** |
 
-![2024 LULC Classification Benchmarking Maps](https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-17%20081638.png)
+<p align="center">
+  <img src="https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-17%20081638.png" alt="2024 LULC Classification Benchmarking Maps" width="500"><br>
+  <sub><b>Figure 2:</b> 2024 LULC Classification Benchmarking Maps</sub>
+</p>
 
 ## 🧠 Mechanistic Interpretability (SHAP)
 Post-hoc SHAP (SHapley Additive exPlanations) attribution was applied to a stratified test sample to validate the physical grounding of the models:
@@ -44,17 +50,26 @@ Post-hoc SHAP (SHapley Additive exPlanations) attribution was applied to a strat
 * **UHI Intensification:** While a regional heatwave drove absolute temperatures up across all land covers, the isolated Urban Heat Island Intensity (UHII) gap between urban and rural baselines widened by 50% (from **+0.28°C** to **+0.42°C**).
 * **Detrended Thermal Penalty:** After accounting for a 1.19°C background regional climate warming via ERA5, the localized LULC-attributable surface warming was estimated at **5.26°C**.
 
-![Air_Temperature_over_the_years](https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-19%20210803.png)
+<p align="center">
+  <img src="https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-19%20210803.png" alt="Air_Temperature_over_the_years" width="500"><br>
+  <sub><b>Figure 6:</b> Air_Temperature_over_the_years</sub>
+</p>
+
 ![Areas where builtUp area increased during the study period](https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-20%20201452.png)
+
+<p align="center">
+  <img src="https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-20%20201452.png" alt="Areas where builtUp area increased during the study period" width="500"><br>
+  <sub><b>Figure 7:</b> Areas where builtUp area increased during the study period.</sub>
+</p>
 
 ## 🚀 Usage & Reproduction
 
 ### 1. Google Earth Engine (Cloud Preprocessing)
-The JavaScript files in `code/gee_script` contain the cloud-masking, feature extraction, and sampling logic. Paste these into the GEE Code Editor to generate the datasets.
+The JavaScript file in `code/GEE_script.js` contain the cloud-masking, feature extraction, and sampling logic. Paste these into the GEE Code Editor to generate the datasets.
 
 ### 2. Local Inference (Model Training)
 Clone the repository and install the required dependencies to run the benchmarking models:
 ```bash
 git clone [https://github.com/ADman007/urban_heat_island-LULC-dynamics.git](https://github.com/ADman007/urban_heat_island-LULC-dynamics.git)
-cd uhi-lulc-dynamics
+cd urban_heat_island-LULC-dynamics
 pip install -r requirements.txt
