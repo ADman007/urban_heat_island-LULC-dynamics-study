@@ -52,12 +52,12 @@ Post-hoc SHAP (SHapley Additive exPlanations) attribution was applied to a strat
   <sub><b>Figure 6:</b> Air_Temperature_over_the_years</sub>
 </p>
 
-
 <p align="center">
   <img src="https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-20%20201452.png" alt="Areas where builtUp area increased during the study period" width="500"><br>
   <sub><b>Figure 7:</b> Areas where builtUp area increased during the study period.</sub>
 </p>
 
+![ LST Change over the years](https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-21%20074845.png)
 ## 🚀 Usage & Reproduction
 
 ### 1. Google Earth Engine (Cloud Preprocessing)
