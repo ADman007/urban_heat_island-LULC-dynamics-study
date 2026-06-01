@@ -10,6 +10,7 @@ This repository contains a multi-model machine learning framework designed to de
 By combining cloud-scale geospatial processing in Google Earth Engine (GEE) with local deep learning benchmarking, this project addresses the critical challenge of **temporal domain shift** in satellite imagery. The methodology deliberately decouples absolute Land Surface Temperature (LST) from the classification feature space, forcing models to rely on structurally stable spectral indices to eliminate cross-epoch misclassification artifacts.
 
 ![Map of Bokaro District](https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Bokaro_District_map.png)
+*Map of Bokaro District*
 
 ## 🔬 Key Methodologies
 * **Cloud-Native Data Engineering:** Constructed pre-monsoon Landsat 8 surface reflectance composites, utilizing a strict <15% scene-level cloud filter and QA_PIXEL masking to bypass atmospheric contamination.
