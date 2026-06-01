@@ -30,10 +30,7 @@ The decoupled 9-band spectral features were exported as a Float32 GeoTIFF and be
 | **XGBoost** | 200 estimators, max depth 6, learning rate 0.1 | **0.92** |
 | **PyTorch MLP** | 4-layer fully connected (128->128->64->32), BatchNorm, Dropout | **0.92** |
 
-<p align="center">
-  <img src="https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-17%20081638.png" alt="2024 LULC Classification Benchmarking Maps" width="500"><br>
-  <sub><b>Figure 2:</b> 2024 LULC Classification Benchmarking Maps</sub>
-</p>
+![ 2024 LULC Classification Benchmarking Maps](https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-17%20081638.png)
 
 ## 🧠 Mechanistic Interpretability (SHAP)
 Post-hoc SHAP (SHapley Additive exPlanations) attribution was applied to a stratified test sample to validate the physical grounding of the models:
@@ -55,7 +52,6 @@ Post-hoc SHAP (SHapley Additive exPlanations) attribution was applied to a strat
   <sub><b>Figure 6:</b> Air_Temperature_over_the_years</sub>
 </p>
 
-![Areas where builtUp area increased during the study period](https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-20%20201452.png)
 
 <p align="center">
   <img src="https://github.com/ADman007/urban_heat_island-LULC-dynamics-study/blob/main/figures/Screenshot%202026-05-20%20201452.png" alt="Areas where builtUp area increased during the study period" width="500"><br>
